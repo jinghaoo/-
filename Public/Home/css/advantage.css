@@ -1,0 +1,193 @@
+.pageScroll{
+    position: relative;
+    background-attachment: fixed;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pageScroll section{
+    margin-top: 1.5rem;
+    margin-bottom: 2.32rem;
+}
+
+.pageScroll .container{
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1200px;
+}
+@media (min-width: 768px) {
+    .pageScroll .container{
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .pageScroll .container{
+        width: 970px;
+    }
+}
+@media (min-width: 1220px) {
+    .pageScroll .container{
+        width: 1200px;
+    }
+}
+
+
+.pageScroll section .icon{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 2.32rem;
+    height: 2.32rem;
+    background-size: contain;
+    -webkit-animation-delay: 0.3s;
+    animation-delay:0.3s;
+}
+.pageScroll section .scroll-left-in{
+    opacity: 0;
+    left: -50%;
+}
+.pageScroll section .scroll-right-in{
+    opacity: 0;
+    right: -50%;
+}
+.pageScroll section .scroll-fade{
+    opacity: 0;
+}
+.pageScroll section .fadeIn{
+  animation: fadeIn 2s;
+    -webkit-animation-fill-mode: forwards ;
+    animation-fill-mode: forwards ;
+}
+.pageScroll section .fadeInLeft{
+    animation: fadeInLeft 1s;
+    -webkit-animation-fill-mode: forwards ;
+    animation-fill-mode: forwards ;
+}
+.pageScroll section .fadeInRight{
+    animation: fadeInRight 1s;
+    -webkit-animation-fill-mode: forwards ;
+    animation-fill-mode: forwards ;
+}
+
+
+@media (max-width: 768px){
+    .pageScroll section .icon{
+        display: none;
+    }
+}
+
+/*优势*/
+.advantage{
+    background-image: url("/Public/Home/imgs/advantage/bg1.png");
+}
+.advantage section .icon1{
+    background-image: url("/Public/Home/imgs/advantage/icon1.png");
+}
+.advantage section .icon2{
+    background-image: url("/Public/Home/imgs/advantage/icon2.png");
+}
+.advantage section .icon3{
+    background-image: url("/Public/Home/imgs/advantage/icon3.png");
+}
+.advantage section .icon4{
+    background-image: url("/Public/Home/imgs/advantage/icon4.png");
+}
+.advantage section h1{
+    color: #fff;
+}
+.animated{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards ;
+    animation-fill-mode: forwards ;
+}
+
+/*服务范围*/
+.serviceTitle{
+    font-size: 18px;
+    line-height: 1.2rem;
+    text-align: center;
+}
+.service{
+    background-image: url("/Public/Home/imgs/advantage/bg2.png");
+}
+.service section .icon1{
+    background-image: url("/Public/Home/imgs/advantage/icon5.png");
+}
+.service section .icon2{
+    background-image: url("/Public/Home/imgs/advantage/icon6.png");
+}
+.service section .icon3{
+    background-image: url("/Public/Home/imgs/advantage/icon7.png");
+}
+.service section .icon4{
+    background-image: url("/Public/Home/imgs/advantage/icon8.png");
+}
+.service section .icon5{
+    background-image: url("/Public/Home/imgs/advantage/icon9.png");
+}
+.service section .icon6{
+    background-image: url("/Public/Home/imgs/advantage/icon10.png");
+}
+.service section h1{
+    color: #46ecff;
+}
+.pageScroll section h1{
+    font-size: 0.36rem;
+    margin:0 0 0.5rem;
+    font-weight: 200;
+}
+.pageScroll section p{
+    font-size: .18rem;
+    color: #fff;
+    line-height: 2;
+    margin: 0;
+    font-weight: 200;
+    text-align: justify;
+}
+@media screen and (max-width: 766px){
+    .pageScroll section{
+        margin: 1rem 0;
+        text-align: center;
+    }
+    .pageScroll section p{
+        padding:0 0.3rem;
+    }
+}
+
+/*动画*/
+@keyframes fadeIn
+{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes fadeIn
+{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes fadeInLeft
+{
+    from {left: -50%; opacity: 0;}
+    to {left: 0; opacity: 1;}
+}
+
+@-webkit-keyframes fadeInLeft
+{
+    from {left: -50%; opacity: 0;}
+    to {left: 0; opacity: 1;}
+}
+@keyframes fadeInRight
+{
+    from {right: -50%; opacity: 0;}
+    to {right: 0; opacity: 1;}
+}
+
+@-webkit-keyframes fadeInRight
+{
+    from {right: -50%; opacity: 0;}
+    to {right: 0;  opacity: 1;}
+}

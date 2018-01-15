@@ -1,0 +1,45 @@
+<include file="Public/header" />
+<include file="Public/content" />
+
+  <!-- content start -->
+  <div class="admin-content">
+    <div class="am-cf am-padding">
+        <div class="am-fl am-cf">
+            <strong class="am-text-primary am-text-lg">首页SEO管理</strong>
+        </div>
+    </div>
+    <hr / style="margin-top: 0;">
+
+    <div class="am-g">
+      <div class="am-u-sm-12 am-u-md-12">
+        <form class="am-form am-form-horizontal" method="post" action="{:U('save')}" enctype="multipart/form-data">
+
+            <div class="am-form-group">
+                <label for="user-name" class="am-u-sm-2 am-form-label">头部 / Html </label>
+                <div class="am-u-sm-9" style="float:left;">
+                    <textarea  name="nav_header" id="header" style="resize:none;" cols="30" rows="10" style="width: 600px">{$data.header}</textarea>
+                </div>
+            </div>
+
+            <div class="am-form-group">
+                <label for="user-email" class="am-u-sm-2 am-form-label">底部 / Html </label>
+                <div class="am-u-sm-9" style="float:left;">
+                    <textarea  name="nav_footer" id="footer" style="resize:none;"  cols="30" rows="10"  style="width: 600px">{$data.footer}</textarea>
+                </div>
+            </div>
+
+            <div class="am-form-group">
+                <div class="am-u-sm-9 am-u-sm-push-2">
+                    <button type="submit" class="am-btn am-btn-primary">保存</button>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- content end -->
+
+</div>
+
+
+<include file="Public/footer" />

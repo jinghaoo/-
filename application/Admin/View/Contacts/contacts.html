@@ -1,0 +1,83 @@
+<include file="Public/header" />
+<include file="Public/content" />
+  <!-- sidebar end -->
+
+  <!-- content start -->
+  <div class="admin-content">
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">联系方式</strong> / <small>Contact</small></div>
+    </div>
+    <hr/>
+    <div class="am-g">
+      <div class="am-u-sm-12 am-u-md-4 am-u-md-push-8">
+      </div>
+
+      <div class="am-u-sm-12 am-u-md-8 am-u-md-pull-4">
+        <form class="am-form am-form-horizontal" method="post" action="{:U('save')}" enctype="multipart/form-data">
+        <volist name="data" id="con">
+          <div class="am-form-group">
+            <label for="user-name" class="am-u-sm-3 am-form-label">电话 / Telephone</label>
+            <div class="am-u-sm-9">
+              <input type="text" id="user-name" name="phone" value="{$con.cont_phone}">
+             
+            </div>
+          </div>
+
+          <div class="am-form-group">
+            <label for="user-email" class="am-u-sm-3 am-form-label">网址 / Website</label>
+            <div class="am-u-sm-9">
+              <input type="text" id="user-email" name="website" value="{$con.cont_website}">
+            </div>
+          </div>
+
+          <div class="am-form-group">
+            <label for="user-phone" class="am-u-sm-3 am-form-label">固话 / Tel</label>
+            <div class="am-u-sm-9">
+              <input type="text" id="user-phone" name="tel" placeholder="" value="{$con.cont_tel}">
+            </div>
+          </div>
+
+          <div class="am-form-group">
+            <label for="user-QQ" class="am-u-sm-3 am-form-label">QQ</label>
+            <div class="am-u-sm-9">
+              <input type="text" id="user-QQ" name="qq" placeholder="" value="{$con.cont_qq}">
+            </div>
+          </div>
+
+           <div class="am-form-group">
+            <label for="user-email" class="am-u-sm-3 am-form-label">邮件 / Email</label>
+            <div class="am-u-sm-9">
+              <input type="text" id="user-email" name="email" value="{$con.cont_email}">
+            </div>
+          </div>
+
+          <div class="am-form-group">
+            <label for="user-weibo" class="am-u-sm-3 am-form-label">公司地址 / Address</label>
+            <div class="am-u-sm-9">
+              <input type="text" id="user-weibo" name="address" placeholder=" " value="{$con.cont_address}">
+            </div>
+          </div>
+
+       <!--    <div class="am-form-group">
+            <label for="user-intro" class="am-u-sm-3 am-form-label">二维码 / Picture</label>
+            <div class="am-u-sm-9">
+              <input type="file" id="file-pic" name="pic" >
+            
+            </div>
+          </div> -->
+
+          <div class="am-form-group">
+            <div class="am-u-sm-9 am-u-sm-push-3">
+              <button type="submit" class="am-btn am-btn-primary">保存</button>
+            </div>
+          </div>
+          </volist>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- content end -->
+
+</div>
+
+<include file="Public/footer" />

@@ -1,0 +1,60 @@
+.content .typeSize{
+    max-width: 1000px;
+}
+.content{
+    padding: 0.3rem 0;
+}
+.title{
+    font-size: 0.18rem;
+}
+.img-box{
+    margin: 0.2rem auto;
+    text-align: center;
+}
+.img-box .img-tip{
+    margin-top: 0.05rem;
+    font-size: 0.14rem;
+}
+/*横向图片*/
+.paragraph img.orientation {
+    width: 100%;
+}
+/*纵向图片*/
+.paragraph img.portrait{
+    width: 100%;
+}
+section .text{
+    text-indent:2em
+}
+.bottom{
+    padding: 0.5rem 10% 0;
+}
+
+.pre,.next{
+    font-size: 0.14rem;
+    cursor: pointer;
+}
+.pre:hover,.next:hover{
+    color: #46ecff;
+}
+.pre{
+    float: left;
+}
+.next{
+    float: right;
+}
+/*超小屏时的样式*/
+@media (max-width: 768px) {
+    .title{
+        font-size: 0.36rem;
+        line-height: 0.4rem;
+        padding-bottom: 0.2rem;
+    }
+    .paragraph .text{
+        font-size: 0.2rem;
+        line-height: 0.24rem;
+    }
+    .pre,.next{
+        font-size: 0.2rem;
+    }
+}

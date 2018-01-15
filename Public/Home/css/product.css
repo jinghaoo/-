@@ -1,0 +1,145 @@
+/*顶部banner*/
+.banner{
+    width: 100%;
+}
+.banner img{
+    width: 100%;
+    vertical-align: bottom;
+}
+.product{
+    margin: 0.8rem auto;
+}
+.product .typeSize{
+    position: relative;
+}
+/*虚线*/
+.product .typeSize:before{
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 0;
+    top: 2%;
+    left: 13%;
+    height: 96%;
+    background: none;
+    border-left: 1px dashed #000;
+}
+/*黑色原点*/
+.product section{
+    position: relative;
+    margin:0.1rem 0;
+}
+.product section .circle{
+   position: absolute;
+    left: 13%;
+    top: 50%;
+    margin-left:-0.08rem;
+    width: 0.16rem;
+    height: 0.16rem;
+    border-radius: 0.08rem;
+    background-color: #000;
+}
+/*左侧文本*/
+.product .text div{
+    width: 1.15rem;
+    margin-top: 0.6rem;
+    border-bottom: 1px solid #000;
+}
+.product .text h1{
+    margin: 0;
+    line-height: 0.3rem;
+    font-size: 0.36rem;
+    color: #ddd;
+}
+.product .text p{
+    line-height: 0.14rem;
+    font-size: 0.14rem;
+}
+.product .img img{
+    position: relative;
+    width: 100%;
+    -webkit-animation-delay: 1.5s;
+    animation-delay:1.5s;
+}
+@media screen and (max-width: 768px){
+    .product .typeSize:before{
+        display: none;
+    }
+    .product .text div{
+        border: none;
+    }
+}
+.product section .scroll-fade{
+    opacity: 0;
+}
+.product section .scroll-left-in{
+    opacity: 0;
+    left: -50%;
+}
+.product section .scroll-right-in{
+    opacity: 0;
+    right: -50%;
+}
+.product section .fadeIn{
+    animation: fadeIn 2s;
+    -webkit-animation-fill-mode: forwards ;
+    animation-fill-mode: forwards ;
+}
+.product section .fadeInLeft{
+    animation: fadeInLeft 1s;
+    -webkit-animation-fill-mode: forwards ;
+    animation-fill-mode: forwards ;
+}
+.product section .fadeInRight{
+    animation: fadeInRight 1s;
+    -webkit-animation-fill-mode: forwards ;
+    animation-fill-mode: forwards ;
+}
+/*动画*/
+@keyframes fadeIn
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-webkit-keyframes fadeIn
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeInLeft
+{
+    from {left: -50%;  opacity: 0;}
+    to {left: 0;  opacity: 1;}
+}
+
+@-webkit-keyframes fadeInLeft
+{
+    from {left: -50%;  opacity: 0;}
+    to {left: 0;  opacity: 1;}
+}
+@keyframes fadeInRight
+{
+    from {right: -50%;  opacity: 0;}
+    to {right: 0;  opacity: 1;}
+}
+
+@-webkit-keyframes fadeInRight
+{
+    from {right: -50%;  opacity: 0;}
+    to {right: 0;  opacity: 1;}
+}
+/*超小屏时的样式*/
+@media (max-width: 768px) {
+    .product .text div{
+        width: auto;
+    }
+    .product .text h1{
+        line-height: 0.35rem;
+    }
+    .product .text p{
+        font-size: 0.16rem;
+        line-height: 0.2rem;
+        margin: 0;
+    }
+}

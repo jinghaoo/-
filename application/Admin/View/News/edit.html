@@ -1,0 +1,95 @@
+<include file="Public/header" />
+<include file="Public/content" />
+
+  <!-- content start -->
+  <div class="admin-content">
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">新闻管理</strong> / <small>编辑</small></div>
+    </div>
+    <hr/>
+    <div class="am-g">
+      <div class="am-u-sm-12 am-u-md-4 am-u-md-push-8">
+      </div>
+
+      <div class="am-u-sm-12 am-u-md-8 am-u-md-pull-4">
+        <form class="am-form am-form-horizontal" method="post" action="{:U('editOK')}" enctype="multipart/form-data">
+        <volist name="data" id="vo">
+        <input type="hidden" name="id" value="{$vo.new_id}">
+
+         <div class="am-form-group">
+            <label for="user-name" class="am-u-sm-3 am-form-label">序号 / Order</label>
+            <div class="am-u-sm-9">
+              <input type="text" id="user-name" placeholder="" name="order" value="{$vo.orderby}">
+             
+            </div>
+          </div>
+          <div class="am-form-group">
+            <label for="user-name" class="am-u-sm-3 am-form-label">标题 / title</label>
+            <div class="am-u-sm-9">
+              <input type="text" id="user-name" placeholder="" value="{$vo.new_title}" name="new_title">
+             
+            </div>
+          </div>
+            <div class="am-form-group">
+                <label for="user-name" class="am-u-sm-3 am-form-label">头部 / Html </label>
+                <div class="am-u-sm-9">
+                    <textarea  name="header" id="header"  cols="30" rows="10" style="width: 600px">{$vo.header}</textarea>
+                </div>
+            </div>
+
+            <div class="am-form-group" style="border: 1px ">
+                <label for="user-email" class="am-u-sm-3 am-form-label">底部 / Html </label>
+                <div class="am-u-sm-9">
+                    <textarea  name="footer" id="nav_footer"  cols="30" rows="10"  style="width: 600px">{$vo.footer}</textarea>
+                </div>
+            </div>
+        
+          <div class="am-form-group">
+            <label for="user-email" class="am-u-sm-3 am-form-label">封面图 / Pic</label>
+            <div class="am-u-sm-9">
+            <img src= "__ROOT__{$vo.new_pic|ltrim='.'}" style="width:80px;" />
+              <input type="file" id="new_pic" name="new_pic" value="">
+            </div>
+          </div>
+
+          <div class="am-form-group">
+            <label for="user-email" class="am-u-sm-3 am-form-label">封面图(灰色) / Pic</label>
+            <div class="am-u-sm-9">
+            <img src= "__ROOT__{$vo.new_gpic|ltrim='.'}" style="width:80px;" />
+              <input type="file" id="new-gpic" name="new_gpic" >
+            </div>
+          </div>
+
+          <div class="am-form-group">
+            <label for="user-name" class="am-u-sm-3 am-form-label">新闻简介 / Intro </label>
+            <div class="am-u-sm-9">
+              <textarea  name="new_intro" id="header"  cols="30" rows="10" style="width: 600px;height: 150px">{$vo.new_intro}</textarea>
+             
+            </div>
+          </div>
+
+          <div class="am-form-group">
+            <label for="user-phone" class="am-u-sm-3 am-form-label">内容 / Content</label>
+            <div class="am-u-sm-9">
+               <textarea  name="new_content" value="{$vo.new_content}" id="intro_detail" cols="30" rows="10">
+                 {$vo.new_content}
+               </textarea>
+            </div>
+          </div>
+
+          <div class="am-form-group">
+            <div class="am-u-sm-9 am-u-sm-push-3">
+              <button type="submit" class="am-btn am-btn-primary">保存修改</button>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="{:U('News/news')}"><button type="button" class="am-btn am-btn-primary">返回</button></a>
+            </div>
+          </div>
+          </volist>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- content end -->
+
+</div>
+
+<include file="Public/footer" />

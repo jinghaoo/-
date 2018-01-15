@@ -1,0 +1,311 @@
+/*引入字体*/
+/*@font-face {*/
+    /*font-family: PingFangSC-Light ;*/
+/*}*/
+/*标题*/
+.title{
+    font-size: 0.24rem;
+    line-height: 0.24rem;
+}
+/*轮播图样式*/
+#bannerSwiper .swiper-slide img{
+    width: 100%;
+    vertical-align: bottom;
+}
+#bannerSwiper .swiper-pagination-bullet{
+    opacity: 1;
+    background-color: #B2B2B2;
+}
+
+#bannerSwiper .swiper-pagination-bullet-active{
+    width: 20px;
+    border-radius:10px;
+    background-color: #B2B2B2;
+    color: #B2B2B2;
+}
+/*关于睿梵*/
+.aboutUs{
+    padding: 60px 0;
+}
+.aboutUs img{
+    float: left;
+}
+.aboutUs .des{
+    float: left;
+    padding: 0;
+}
+.aboutUs .des h4{
+    font-family: PingFangSC-Light;
+    font-size: 0.32rem;
+    letter-spacing: 0.03rem;
+    margin: 0 0 0.3rem;
+}
+.aboutUs .des p{
+    font-size: 0.14rem;
+    line-height: 0.28rem;
+    margin-bottom: 0.25rem;
+    text-indent: 2em;
+}
+
+/*数量*/
+.number{
+    width: 100%;
+    height: 16vw;
+    min-height: 165px;
+    background: url('/Public/Home/imgs/index/bg1.png') center center no-repeat;
+    background-size: cover;
+}
+.number .outBox{
+    height: 100%;
+    position: relative;
+}
+.number .item{
+    width: 33.3%;
+    float: left;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color:#fff;
+    text-align: center;
+}
+.number .item:nth-child(1){
+    left:0;
+}
+.number .item:nth-child(2){
+    left:33.3%;
+}
+.number .item:nth-child(3){
+    right: 0;
+}
+.number .item img{
+    width: 4vw;
+    min-width: 50px;
+    margin-bottom: 0.1rem;
+}
+.number .item .line1{
+    font-size: 0.12rem;
+}
+.number .item .line2{
+    font-size: 0.3rem;
+}
+
+/*案例*/
+.case{
+    padding: 0.7rem 0;
+}
+.case .title{
+    font-family: PingFangSC-Light;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    padding-bottom: 0.5rem;
+}
+.case img{
+    width: 100%;
+}
+.case ul li{
+    padding-bottom: 25%;
+    position: relative;
+}
+.case ul li div{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    padding: 5px;
+}
+.case ul li a{
+    display: block;
+    height: 100%;
+    overflow: hidden;
+}
+.case ul a p{
+    position: absolute;
+    top:50%;
+    margin-top: -0.09rem;
+    font-size: 0.18rem;
+}
+.case ul a p.textCenter{
+    width: 96%;
+    color: #fff;
+    text-align: center;
+}
+.case ul a p.textLeft{
+    color: #333;
+    left:10%;
+}
+.case ul a p.textRight{
+    color: #333;
+    right:15%;
+}
+.case ul li a span{
+    display: block;
+    height: 100%;
+    text-indent: -9999px;
+    background: #ddd no-repeat 50%;
+    background-size: cover;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: all .3s;
+}
+/*.case ul li a span:hover{*/
+    /*transform: scale(1.4);*/
+/*}*/
+
+/*书法*/
+.handwriting{
+    width: 100%;
+}
+.handwriting img{
+    width: 100%;
+}
+
+/*新闻*/
+.news{
+    padding: 0.7rem 0;
+    background-color: #f8f8f8;
+}
+.news .newsItem a{
+    display: block;
+}
+.news .title{
+    font-family: PingFangSC-Light;
+    padding-bottom: 0.45rem;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+}
+.news .newsItem{
+    padding: 0;
+    /*position: relative;*/
+    padding-right:0.4rem;
+}
+.news .imgBox{
+    width: 1.6rem;
+    height: 2.1rem;
+    margin: 0.2rem auto 0;
+    position: relative;
+    background: url("/Public/Home/imgs/index/news/coverBg.png") center center no-repeat;
+}
+
+.news .news-cover{
+    position: absolute;
+    width: 1.6rem;
+    height: 2rem;
+    background: center center no-repeat;
+    background-size: cover;
+    margin-top: -0.13rem;
+    margin-left: -0.17rem;
+}
+.news .news-text{
+    width: 1.6rem;
+    margin: 0 auto;
+}
+.news .newsTitle{
+    color: #222;
+    margin: 0.35rem auto 0.07rem;
+    word-break:break-all;
+    font-size: 0.18rem;
+    line-height: 0.2rem;
+}
+.news .newsContent{
+    margin: 0 auto;
+    word-break:break-all;
+    font-size: 0.14rem;
+    line-height: 0.22rem;
+    color: #999;
+}
+.news .moreBtn{
+    display: block;
+    width: 0.9rem;
+    height: 0.4rem;
+    margin: 0.45rem auto 0;
+    cursor: pointer;
+    background: url("/Public/Home/imgs/index/news/moreBtn.png") center center no-repeat;
+    background-size: contain;
+}
+/*合作伙伴*/
+.partner{
+    padding: 0.7rem 0;
+}
+.partner .title{
+    font-family: PingFangSC-Light;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    padding-bottom: 0.2rem;
+}
+.partner .partnerItem{
+    padding: 0 ;
+    text-align: center;
+}
+.partner .partnerItem img{
+    width: 80%;
+}
+
+
+
+.partnerSwiper {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.partnerSwiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: 100px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.partnerSwiper img{
+    width: 100%;
+    z-index:20;
+}
+/*超小屏时的样式*/
+@media (max-width: 768px) {
+    .aboutUs .des h4{
+        font-size: 0.32rem;
+        line-height: 0.34rem;
+    }
+    .aboutUs .des p{
+        font-size: 0.2rem;
+        line-height: 0.28rem;
+    }
+    .news .typeSize{
+        padding-left: 0.17rem;
+    }
+    .news .newsItem {
+        padding: 0;
+        width: 100%;
+        margin: 0.2rem 0;
+    }
+    .news .newsItem .imgBox{
+        float: left;
+    }
+    .news .newsContent{
+        font-size: 0.18rem;
+        line-height: 0.25rem;
+    }
+    .news .newsTitle{
+        margin-top: 0.2rem;
+        font-size: 0.24rem;
+        line-height: 0.28rem;
+    }
+    .news .newsItem .news-text{
+        width: auto;
+        overflow: hidden;
+        padding-left: 0.3rem;
+    }
+}
