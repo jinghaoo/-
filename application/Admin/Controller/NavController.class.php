@@ -11,8 +11,11 @@ class NavController extends BaseController{
 
     }
     function save(){
-        $nav_header = I('post.nav_header', '');
-        $nav_footer = I('post.nav_footer', '');
+        $header = I('post.nav_header', '');
+        $footer = I('post.nav_footer', '');
+
+        $nav_header = addslashes($header);
+        $nav_footer = addslashes($footer);
 
         $sql = "update re_nav set header='$nav_header',footer='$nav_footer' where id = 1";
         $data = D('Nav')->execute($sql);

@@ -20,21 +20,21 @@
          <div class="am-form-group">
             <label for="user-name" class="am-u-sm-3 am-form-label">序号 / Order</label>
             <div class="am-u-sm-9">
-              <input type="text" id="user-name" placeholder="" name="order" value="{$vo.orderby}">
+              <input type="text" id="user-name" placeholder="" name="order" value="{$vo.orderby|html_entity_decode}">
              
             </div>
           </div>
           <div class="am-form-group">
             <label for="user-name" class="am-u-sm-3 am-form-label">标题 / Title</label>
             <div class="am-u-sm-9">
-              <input type="text" id="user-name" placeholder="" value="{$vo.case_title}" name="case_title">
+              <input type="text" id="user-name" placeholder="" value="{$vo.case_title|html_entity_decode}" name="case_title">
              
             </div>
           </div>
           <div class="am-form-group">
             <label for="user-name" class="am-u-sm-3 am-form-label">头部 / Html </label>
             <div class="am-u-sm-9">
-              <textarea  name="header" id="header" cols="30" rows="10" style="width: 600px">{$vo.header}</textarea>
+              <textarea  name="header" id="header" cols="30" rows="10" style="width: 600px">{$vo.header|html_entity_decode}</textarea>
              
             </div>
           </div>
@@ -42,7 +42,7 @@
           <div class="am-form-group" style="border: 1px ">
             <label for="user-email" class="am-u-sm-3 am-form-label">底部 / Html </label>
             <div class="am-u-sm-9">
-              <textarea  name="footer" id="nav_footer" cols="30" rows="10"  style="width: 600px">{$vo.footer}</textarea>
+              <textarea  name="footer" id="nav_footer" cols="30" rows="10"  style="width: 600px">{$vo.footer|html_entity_decode}</textarea>
             </div>
           </div>
           <div class="am-form-group">
@@ -56,7 +56,7 @@
           <div class="am-form-group">
             <label for="user-phone" class="am-u-sm-3 am-form-label">内容 / Content</label>
             <div class="am-u-sm-9">
-               <textarea  name="case_content" id="intro_detail" cols="30" rows="10">{$vo.case_content}</textarea>
+               <textarea  name="case_content" id="intro_detail" cols="30" rows="10">{$vo.case_content|html_entity_decode}</textarea>
             
             </div>
           </div>

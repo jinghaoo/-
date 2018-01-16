@@ -64,7 +64,7 @@
         <volist name="data" id="vo">
             <!-- <a href="/index.php/Home/News/detail/id/{$new.new_id}"> -->
                 <div class="row news-item" >
-                 <h3 class="item-title" align="center">{$vo.new_title}</h3>
+                 <h3 class="item-title" align="center">{$vo.new_title|html_entity_decode}</h3>
                     <!-- <div class="img col-xs-4"><img src={$vo["new_pic"]|ltrim='.'}></div> -->
                     <div class="des col-xs-7 col-xs-offset-1" style="width:100%">
                        
@@ -74,6 +74,14 @@
                     </div>
                 </div>
             </a>
+                <div class="bottom clearfix">
+                  <div class="next">
+                    <a href="{:U('News/detail1','type=before&id='.$vo['new_id'])}"><<&nbsp;上一页</a>
+                    </div>
+                    <div class="pre">
+                    <a href="{:U('News/detail1','type=after&id='.$vo['new_id'])}">>>&nbsp;下一页</a>
+                    </div>
+                </div>
         </volist>
     </div>
 </div>
@@ -134,7 +142,7 @@
     </div>
 </script>
 <script type="text/javascript" src="__PUBLIC__/Home/libs/jquery/jquery.min.js"></script>
-<!-- <script type="text/javascript" src="__PUBLIC__/Home/libs/bootstrap/js/bootstrap.min.js"></script> -->
+<script type="text/javascript" src="__PUBLIC__/Home/libs/bootstrap/js/bootstrap.min.js"></script>
 <!-- <script type="text/javascript" src="__PUBLIC__/Home/libs/template-web.js"></script>
 <script type="text/javascript" src="__PUBLIC__/Home/script/publice.js"></script>
 <script type="text/javascript" src="__PUBLIC__/Home/script/news-detail.js"></script> -->

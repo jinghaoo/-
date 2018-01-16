@@ -11,7 +11,8 @@ class BannerController extends BaseController {
     }
     function add(){
     if(IS_POST){
-      $order = I('post.order');
+      $order1 = I('post.order');
+      $order  =addslashes($order1);
       // //$news_pic   = I('post.new_pic');
       // $news_content=I('post.new_content');
 

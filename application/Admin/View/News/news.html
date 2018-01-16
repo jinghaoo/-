@@ -40,11 +40,11 @@
           <tbody>
           <volist name="data" id="con">
             <tr>
-                <td>{$con.orderby}</td>
-                <td>{$con.new_title}</td>
+                <td>{$con.orderby|html_entity_decode}</td>
+                <td>{$con.new_title|html_entity_decode}</td>
                 <td>
                     <img src= "__ROOT__{$con.new_pic|ltrim='.'}" style="width:60px;" /></td>
-                <td style="text-align:center">{$con.new_intro}</td>
+                <td style="text-align:center">{$con.new_intro|html_entity_decode}</td>
               <td>
                 <div class="am-btn-toolbar">
                   <div class="am-btn-group am-btn-group-xs">

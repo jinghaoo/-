@@ -33,12 +33,18 @@ class CasesController extends BaseController {
 	}
 	function add(){
 		if(IS_POST){
-			$cases_title = I('post.case_title');
-			$header = I('post.header');
+			$_title = I('post.case_title');
+			$cases_title = addslashes($title);
+
 			$order  =I('post.order');
-			$footer =I('post.footer');
+
+			$case_header = I('post.header');
+			$case_footer =I('post.footer');
+			$header  = addslashes($case_header);
+			$footer  = addslashes($case_footer);
 			//$news_pic   = I('post.new_pic');
-			$cases_content=I('post.case_content');
+			$content=I('post.case_content');
+			$cases_content = addslashes($content);
 
 			//配置文件上传
 			if(isset($_FILES)){
@@ -93,14 +99,21 @@ class CasesController extends BaseController {
 	}
 
 	function editOk(){
-		$cases_title = I('post.case_title');
-		$order  = I('post.order');
-		$header = I('post.header');
-			$footer =I('post.footer');
+		$title = I('post.case_title');
+		$cases_title = addslashes($title);
+
+		$order1  = I('post.order');
+		$order   =addslashes($order1);
+		
+		$case_header = I('post.header');
+		$case_footer =I('post.footer');
+		$header  = addslashes($case_header);
+		$footer  = addslashes($case_footer);
 			//$news_pic   = I('post.new_pic');
-			$cases_content=I('post.case_content');
+		$content=I('post.case_content');
+		$cases_content = addslashes($content);
 			//配置文件上传
-			$cases_id    =I('post.id');
+		$cases_id    =I('post.id');
 
 				if($_FILES['case_pic']['error'] == '0'){
 					$config = array(

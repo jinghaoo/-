@@ -17,14 +17,14 @@
             <div class="am-form-group">
                 <label for="user-name" class="am-u-sm-2 am-form-label">头部 / Html </label>
                 <div class="am-u-sm-9" style="float:left;">
-                    <textarea  name="nav_header" id="header" style="resize:none;" cols="30" rows="10" style="width: 600px">{$data.header}</textarea>
+                    <textarea  name="nav_header" id="header" style="resize:none;" cols="30" rows="10" style="width: 600px">{$data.header|html_entity_decode}</textarea>
                 </div>
             </div>
 
             <div class="am-form-group">
                 <label for="user-email" class="am-u-sm-2 am-form-label">底部 / Html </label>
                 <div class="am-u-sm-9" style="float:left;">
-                    <textarea  name="nav_footer" id="footer" style="resize:none;"  cols="30" rows="10"  style="width: 600px">{$data.footer}</textarea>
+                    <textarea  name="nav_footer" id="footer" style="resize:none;"  cols="30" rows="10"  style="width: 600px">{$data.footer|html_entity_decode}</textarea>
                 </div>
             </div>
 

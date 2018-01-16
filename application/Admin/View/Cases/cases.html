@@ -41,10 +41,10 @@
           <volist name="data" id="con">
             <tr>
              
-              <td>{$con.orderby}</td>
-              <td>{$con.case_title}</td>
+              <td>{$con.orderby|html_entity_decode}</td>
+              <td>{$con.case_title|html_entity_decode}</td>
               <td><img src= "__ROOT__{$con.case_pic|ltrim='.'}" style="width:50px;" /></td>
-              <td style="text-align:center">{$con.case_content}</td>
+              <td style="text-align:center">{$con.case_content|html_entity_decode}</td>
           
               <td>
                 <div class="am-btn-toolbar">

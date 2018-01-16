@@ -54,7 +54,15 @@
                         </div>
                     </div>
                 </div>
-            </a><?php endforeach; endif; else: echo "" ;endif; ?>
+            </a>
+                <div class="bottom clearfix">
+                  <div class="next">
+                    <a href="<?php echo U('Cases/detail1','type=before&id='.$vo['case_id']);?>"><<&nbsp;上一页</a>
+                    </div>
+                    <div class="pre">
+                    <a href="<?php echo U('Cases/detail1','type=after&id='.$vo['case_id']);?>">>>&nbsp;下一页</a>
+                    </div>
+                </div><?php endforeach; endif; else: echo "" ;endif; ?>
     </div>
 </div>
 
