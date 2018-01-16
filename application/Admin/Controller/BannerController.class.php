@@ -9,7 +9,7 @@ class BannerController extends BaseController {
         $this->assign('data',$data);
         $this->display();
     }
-    function add(){
+    public function add(){
     if(IS_POST){
       $order1 = I('post.order');
       $order  =addslashes($order1);

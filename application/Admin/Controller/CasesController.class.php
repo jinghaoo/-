@@ -173,6 +173,3 @@ class CasesController extends BaseController {
 	
 
 }
-
-
-

@@ -4,18 +4,15 @@ use Think\Controller;
 
 class IndexController extends Controller {
     public function index(){
-    	echo 123;
+    	 $this->redirect('Index/login');
     }
    
     function login(){
      	if(IS_POST){
-     		$name1  = I('post.user_name');
-            $name  = addslashes($name1);
-
+     		$name  = I('post.user_name');
      		$password =  I('post.user_pass');
      		$model = D('User');
      		$pass = getPwd($password);
-     		//die($pass);
 
      		if($model->checkLogin($name,$pass)){
      			$this->success('登陆成功',U('Main/index'));
