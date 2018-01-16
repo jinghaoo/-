@@ -4,7 +4,7 @@ use Think\Controller;
 
 class IndexController extends Controller {
     public function index(){
-    	echo 123;
+    	 $this->redirect('Index/login');
     }
    
     function login(){
@@ -18,7 +18,7 @@ class IndexController extends Controller {
      		if($model->checkLogin($name,$pass)){
      			$this->success('登陆成功',U('Main/index'));
      		}else{
-     			$this->error('用户名或密码错误',U('Main/login'));
+     			$this->error('用户名或密码错误',U('Index/login'));
      		}
         }else{
          	$this->display();
