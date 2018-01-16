@@ -99,7 +99,7 @@
                         <if condition="($key+1)%12 == 1" >
                             <li class="col-xs-6 col-md-3">
                                 <div>
-                                    <a href="{:U('Cases/detail','id='.$case.case_id)}">
+                                    <a href="{:U('Cases/detail','id='.$case['case_id'])}">
                                         <span style="background-image: url({$case.case_pic|ltrim='.'})"></span>
                                     </a>
                                 </div>
@@ -107,7 +107,7 @@
                         <elseif condition="($key+1)%12 == 2"/>
                             <li class="col-xs-6 col-md-3">
                                 <div>
-                                    <a href="{:U('Cases/detail','id='.$case.case_id)}">
+                                    <a href="{:U('Cases/detail','id='.$case['case_id'])}">
                                         <span style="background-image: url({$case.case_pic|ltrim='.'})">{$case.case_title}</span>
                                         <p class="textCenter">{$case.case_title}</p>
                                     </a>
@@ -116,7 +116,7 @@
                         <elseif condition="($key+1)%12 == 3"/>
                             <li class="col-xs-12 col-md-6">
                                 <div>
-                                    <a href="{:U('Cases/detail','id='.$case.case_id)}">
+                                    <a href="{:U('Cases/detail','id='.$case['case_id'])}">
                                         <span style="background-image: url({$case.case_pic|ltrim='.'})">{$case.case_title}</span>
                                         <p class="textLeft">{$case.case_title}</p>
                                     </a>
@@ -125,7 +125,7 @@
                         <elseif condition="($key+1)%12 == 4"/>
                             <li class="col-xs-12 col-md-6">
                                 <div>
-                                    <a href="{:U('Cases/detail','id='.$case.case_id)}">
+                                    <a href="{:U('Cases/detail','id='.$case['case_id'])}">
                                         <span style="background-image: url({$case.case_pic|ltrim='.'})">{$case.case_title}</span>
                                         <p class="textLeft">{$case.case_title}</p>
                                     </a>
@@ -134,7 +134,7 @@
                         <elseif condition="($key+1)%12 == 5"/>
                             <li class="col-xs-6 col-md-3">
                                 <div>
-                                    <a href="{:U('Cases/detail','id='.$case.case_id)}">
+                                    <a href="{:U('Cases/detail','id='.$case['case_id'])}">
                                         <span style="background-image: url({$case.case_pic|ltrim='.'})">{$case.case_title}</span>
                                         <p class="textCenter">{$case.case_title}</p>
                                     </a>
@@ -143,7 +143,7 @@
                         <elseif condition="($key+1)%12 == 6"/>
                             <li class="col-xs-6 col-md-3">
                                 <div>
-                                    <a href="{:U('Cases/detail','id='.$case.case_id)}">
+                                    <a href="{:U('Cases/detail','id='.$case['case_id'])}">
                                         <span style="background-image: url({$case.case_pic|ltrim='.'})"></span>
                                     </a>
                                 </div>
@@ -151,7 +151,7 @@
                         <elseif condition="($key+1)%12 == 7"/>
                             <li class="col-xs-6 col-md-3">
                                 <div>
-                                    <a href="{:U('Cases/detail','id='.$case.case_id)}">
+                                    <a href="{:U('Cases/detail','id='.$case['case_id'])}">
                                         <span style="background-image: url({$case.case_pic|ltrim='.'})">{$case.case_title}</span>
                                         <p class="textCenter">{$case.case_title}</p>
                                     </a>
@@ -160,7 +160,7 @@
                         <elseif condition="($key+1)%12 == 8"/>
                             <li class="col-xs-6 col-md-3">
                                 <div>
-                                    <a href="{:U('Cases/detail','id='.$case.case_id)}">
+                                    <a href="{:U('Cases/detail','id='.$case['case_id'])}">
                                         <span style="background-image: url({$case.case_pic|ltrim='.'})"></span>
                                     </a>
                                 </div>
@@ -168,7 +168,7 @@
                         <elseif condition="($key+1)%12 == 9"/>
                             <li class="col-xs-12 col-md-6">
                                 <div>
-                                    <a href="{:U('Cases/detail','id='.$case.case_id)}">
+                                    <a href="{:U('Cases/detail','id='.$case['case_id'])}">
                                         <span style="background-image: url({$case.case_pic|ltrim='.'})">{$case.case_title}</span>
                                         <p class="textRight">{$case.case_title}</p>
                                     </a>
@@ -177,7 +177,7 @@
                         <elseif condition="($key+1)%12 == 10"/>
                             <li class="col-xs-12 col-md-6">
                                 <div>
-                                    <a href="{:U('Cases/detail','id='.$case.case_id)}">
+                                    <a href="{:U('Cases/detail','id='.$case['case_id'])}">
                                         <span style="background-image: url({$case.case_pic|ltrim='.'})"></span>
                                     </a>
                                 </div>
@@ -185,7 +185,7 @@
                         <elseif condition="($key+1)%12 == 11"/>
                             <li class="col-xs-6 col-md-3">
                                 <div>
-                                    <a href="{:U('Cases/detail','id='.$case.case_id)}">
+                                    <a href="{:U('Cases/detail','id='.$case['case_id'])}">
                                         <span style="background-image: url({$case.case_pic|ltrim='.'})"></span>
                                     </a>
                                 </div>
@@ -193,7 +193,7 @@
                         <elseif condition="($key+1)%12 == 0" />
                             <li class="col-xs-6 col-md-3">
                                 <div>
-                                    <a href="{:U('Cases/detail','id='.$case.case_id)}">
+                                    <a href="{:U('Cases/detail','id='.$case['case_id'])}">
                                         <span style="background-image: url({$case.case_pic|ltrim='.'})">{$case.case_title}</span>
                                         <p class="textCenter">{$case.case_title}</p>
                                     </a>

@@ -95,7 +95,7 @@
                 <ul class="row">
                     <?php if(is_array($cases)): foreach($cases as $key=>$case): if(($key+1)%12 == 1): ?><li class="col-xs-6 col-md-3">
                                 <div>
-                                    <a href="<?php echo U('Cases/detail','id='.$case.case_id);?>">
+                                    <a href="<?php echo U('Cases/detail','id='.$case['case_id']);?>">
                                         <span style="background-image: url(<?php echo (ltrim($case["case_pic"],'.')); ?>)"></span>
                                     </a>
                                 </div>
@@ -103,7 +103,7 @@
                         <?php elseif(($key+1)%12 == 2): ?>
                             <li class="col-xs-6 col-md-3">
                                 <div>
-                                    <a href="<?php echo U('Cases/detail','id='.$case.case_id);?>">
+                                    <a href="<?php echo U('Cases/detail','id='.$case['case_id']);?>">
                                         <span style="background-image: url(<?php echo (ltrim($case["case_pic"],'.')); ?>)"><?php echo ($case["case_title"]); ?></span>
                                         <p class="textCenter"><?php echo ($case["case_title"]); ?></p>
                                     </a>
@@ -112,7 +112,7 @@
                         <?php elseif(($key+1)%12 == 3): ?>
                             <li class="col-xs-12 col-md-6">
                                 <div>
-                                    <a href="<?php echo U('Cases/detail','id='.$case.case_id);?>">
+                                    <a href="<?php echo U('Cases/detail','id='.$case['case_id']);?>">
                                         <span style="background-image: url(<?php echo (ltrim($case["case_pic"],'.')); ?>)"><?php echo ($case["case_title"]); ?></span>
                                         <p class="textLeft"><?php echo ($case["case_title"]); ?></p>
                                     </a>
@@ -121,7 +121,7 @@
                         <?php elseif(($key+1)%12 == 4): ?>
                             <li class="col-xs-12 col-md-6">
                                 <div>
-                                    <a href="<?php echo U('Cases/detail','id='.$case.case_id);?>">
+                                    <a href="<?php echo U('Cases/detail','id='.$case['case_id']);?>">
                                         <span style="background-image: url(<?php echo (ltrim($case["case_pic"],'.')); ?>)"><?php echo ($case["case_title"]); ?></span>
                                         <p class="textLeft"><?php echo ($case["case_title"]); ?></p>
                                     </a>
@@ -130,7 +130,7 @@
                         <?php elseif(($key+1)%12 == 5): ?>
                             <li class="col-xs-6 col-md-3">
                                 <div>
-                                    <a href="<?php echo U('Cases/detail','id='.$case.case_id);?>">
+                                    <a href="<?php echo U('Cases/detail','id='.$case['case_id']);?>">
                                         <span style="background-image: url(<?php echo (ltrim($case["case_pic"],'.')); ?>)"><?php echo ($case["case_title"]); ?></span>
                                         <p class="textCenter"><?php echo ($case["case_title"]); ?></p>
                                     </a>
@@ -139,7 +139,7 @@
                         <?php elseif(($key+1)%12 == 6): ?>
                             <li class="col-xs-6 col-md-3">
                                 <div>
-                                    <a href="<?php echo U('Cases/detail','id='.$case.case_id);?>">
+                                    <a href="<?php echo U('Cases/detail','id='.$case['case_id']);?>">
                                         <span style="background-image: url(<?php echo (ltrim($case["case_pic"],'.')); ?>)"></span>
                                     </a>
                                 </div>
@@ -147,7 +147,7 @@
                         <?php elseif(($key+1)%12 == 7): ?>
                             <li class="col-xs-6 col-md-3">
                                 <div>
-                                    <a href="<?php echo U('Cases/detail','id='.$case.case_id);?>">
+                                    <a href="<?php echo U('Cases/detail','id='.$case['case_id']);?>">
                                         <span style="background-image: url(<?php echo (ltrim($case["case_pic"],'.')); ?>)"><?php echo ($case["case_title"]); ?></span>
                                         <p class="textCenter"><?php echo ($case["case_title"]); ?></p>
                                     </a>
@@ -156,7 +156,7 @@
                         <?php elseif(($key+1)%12 == 8): ?>
                             <li class="col-xs-6 col-md-3">
                                 <div>
-                                    <a href="<?php echo U('Cases/detail','id='.$case.case_id);?>">
+                                    <a href="<?php echo U('Cases/detail','id='.$case['case_id']);?>">
                                         <span style="background-image: url(<?php echo (ltrim($case["case_pic"],'.')); ?>)"></span>
                                     </a>
                                 </div>
@@ -164,7 +164,7 @@
                         <?php elseif(($key+1)%12 == 9): ?>
                             <li class="col-xs-12 col-md-6">
                                 <div>
-                                    <a href="<?php echo U('Cases/detail','id='.$case.case_id);?>">
+                                    <a href="<?php echo U('Cases/detail','id='.$case['case_id']);?>">
                                         <span style="background-image: url(<?php echo (ltrim($case["case_pic"],'.')); ?>)"><?php echo ($case["case_title"]); ?></span>
                                         <p class="textRight"><?php echo ($case["case_title"]); ?></p>
                                     </a>
@@ -173,7 +173,7 @@
                         <?php elseif(($key+1)%12 == 10): ?>
                             <li class="col-xs-12 col-md-6">
                                 <div>
-                                    <a href="<?php echo U('Cases/detail','id='.$case.case_id);?>">
+                                    <a href="<?php echo U('Cases/detail','id='.$case['case_id']);?>">
                                         <span style="background-image: url(<?php echo (ltrim($case["case_pic"],'.')); ?>)"></span>
                                     </a>
                                 </div>
@@ -181,7 +181,7 @@
                         <?php elseif(($key+1)%12 == 11): ?>
                             <li class="col-xs-6 col-md-3">
                                 <div>
-                                    <a href="<?php echo U('Cases/detail','id='.$case.case_id);?>">
+                                    <a href="<?php echo U('Cases/detail','id='.$case['case_id']);?>">
                                         <span style="background-image: url(<?php echo (ltrim($case["case_pic"],'.')); ?>)"></span>
                                     </a>
                                 </div>
@@ -189,7 +189,7 @@
                         <?php elseif(($key+1)%12 == 0): ?>
                             <li class="col-xs-6 col-md-3">
                                 <div>
-                                    <a href="<?php echo U('Cases/detail','id='.$case.case_id);?>">
+                                    <a href="<?php echo U('Cases/detail','id='.$case['case_id']);?>">
                                         <span style="background-image: url(<?php echo (ltrim($case["case_pic"],'.')); ?>)"><?php echo ($case["case_title"]); ?></span>
                                         <p class="textCenter"><?php echo ($case["case_title"]); ?></p>
                                     </a>
