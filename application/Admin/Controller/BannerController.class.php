@@ -9,7 +9,6 @@ class BannerController extends BaseController {
         $this->assign('data',$data);
         $this->display();
     }
-
     public function add(){
       if(IS_POST){
         $order = I('post.order');
@@ -77,7 +76,6 @@ class BannerController extends BaseController {
                 'orderby' =>$order
               );
             $model = D('Banner')->save($info);
-
             if($model){
               $this->success('修改成功',U('ban'));
             }else{
@@ -100,8 +98,7 @@ class BannerController extends BaseController {
     
     public function del(){
       $id = I('get.id');
-      $data = D('Banner')->where("id='$id'")->delete();
-      
+      $data = D('Banner')->where("id='$id'")->delete();     
       if($data){
         $this->success('删除成功',U('ban'));
       }else{

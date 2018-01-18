@@ -31,12 +31,15 @@ class CasesController extends BaseController {
 			$_title = I('post.case_title');
 			$cases_title = addslashes($title);
 			$order  =I('post.order');
+
 			$case_header = I('post.header');
 			$case_footer =I('post.footer');
 			$header  = addslashes($case_header);
 			$footer  = addslashes($case_footer);
+
 			$content=I('post.case_content');
 			$cases_content = addslashes($content);
+
 			//配置文件上传
 			if(isset($_FILES)){		
 			if($_FILES['case_pic']['error'] == '0'){
@@ -68,7 +71,7 @@ class CasesController extends BaseController {
 					}					
 				}
 			}else{
-				$this->error('请上传图片1');
+				$this->error('请上传图片');
 			}
 		}else{
 			$this->error('请上传图片');
@@ -89,15 +92,18 @@ class CasesController extends BaseController {
 		$this->display();
 	}
 
+
 	public function editOk(){
 		$title = I('post.case_title');
 		$cases_title = addslashes($title);
 		$order1  = I('post.order');
 		$order   =addslashes($order1);		
+
 		$case_header = I('post.header');
 		$case_footer =I('post.footer');
 		$header  = addslashes($case_header);
 		$footer  = addslashes($case_footer);
+
 		$content=I('post.case_content');
 		$cases_content = addslashes($content);
 		$cases_id    =I('post.id');
@@ -107,7 +113,6 @@ class CasesController extends BaseController {
 					'exts' =>array('jpg','png','gif'),
 					'rootPath' => './Public/Uploads/',
 				);
-
 				$upload = new \Think\Upload($config);
 				$info = $upload->uploadOne($_FILES['case_pic']);
 				if(!$info){
@@ -157,11 +162,6 @@ class CasesController extends BaseController {
 		}else{
 			$this->error('删除失败',U('cases'));
 		}
-		// dump($data);
-		// die;
 	}
 	
 }
-
-
-

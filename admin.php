@@ -2,6 +2,8 @@
 // 1. 设置相应类型
 header("Content-Type:text/html;charset=utf-8");
 // 2. 定义项目路径
+define('BIND_MODULE', 'Admin');
+
 define('APP_PATH', './application/');
 // 3. 开启调试模式
 define('APP_DEBUG', true);

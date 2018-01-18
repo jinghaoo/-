@@ -15,6 +15,7 @@ class NewsController extends Controller {
         $nav = $navModel->find();
         $this->assign('nav',$nav);
         $id = I('get.id');
+
         $data = D('News')->where("new_id='$id'")->find();
         if(!$data){
             $this->redirect('news');
@@ -30,5 +31,6 @@ class NewsController extends Controller {
         $this->assign('detail', $data);
         $this->display('detail');
         }
+
     }
 }

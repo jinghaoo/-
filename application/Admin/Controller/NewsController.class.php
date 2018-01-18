@@ -13,13 +13,15 @@ class NewsController extends BaseController {
 			$arr['new_pic'] = $value['new_pic'];
 			$arr['orderby'] = $value['orderby'];
 			//把一些预定义的 HTML 实体转换为字符  
-			$html_string = htmlspecialchars_decode($value['new_intro']);  
+			$html_string = htmlspecialchars_decode($value['new_intro']);
 			//将空格替换成空  
 			$content = str_replace(" ", "", $html_string);  
 			//函数剥去字符串中的 HTML、XML 以及 PHP 的标签,获取纯文本内容  
+
 			$contents = strip_tags($content);  		  
 			//返回字符串中的前80字符串长度的字符  
 			$text = mb_substr($contents, 0, 20, "utf-8");   
+
 			$arr['new_intro'] =  $text.'...';
 			$array[]=$arr;
 		}
@@ -40,6 +42,7 @@ class NewsController extends BaseController {
 			$new_intros = addslashes($intros);
 			$content=I('post.new_content');
 			$news_content = addslashes($content);
+
 			//配置文件上传
 			if(isset($_FILES)){
 			if($_FILES['new_pic']['error'] == '0' && $_FILES['new_gpic']['error'] == '0' ){
@@ -56,6 +59,7 @@ class NewsController extends BaseController {
 				}else{
 					$news_pic   = $config['rootPath'].$info['savepath'].$info['savename'];
 					$news_gpic   = $config['rootPath'].$info2['savepath'].$info2['savename'];
+
 					$info = array(
 			    		'new_id'=>'',
 			    		'new_title' =>$news_title,
@@ -84,7 +88,9 @@ class NewsController extends BaseController {
 			$this->display();
 		}
 	}
+
 	public function edit(){
+
 		$id = I('get.id');
 		$model = D('News');
 		$data =$model->where("new_id='$id'")->select();
@@ -102,11 +108,12 @@ class NewsController extends BaseController {
 		$new_footer     =I('post.footer');
 		$header  = addslashes($new_header);
 		$footer  = addslashes($new_footer);
+
 		$intros  =I('post.new_intro');
 		$new_intros = addslashes($intros);
 		$content=I('post.new_content');
 		$news_content = addslashes($content);
-		
+
 		$model = D('News');
 		$data = $model->where("new_id='$news_id'")->select();
 		foreach ($data as $key => $value) {
@@ -134,6 +141,7 @@ class NewsController extends BaseController {
 			}
 			$news_gpic   = $config['rootPath'].$info['savepath'].$info['savename'];
 	    }
+
 	    $info = array(
 		    		'new_id' =>$news_id,
 		    		'new_title' =>$news_title,
@@ -146,14 +154,17 @@ class NewsController extends BaseController {
 		    		'orderby' =>$order
 		    	);
 			$model = D('News')->save($info);
+
 		if($model){
 			$this->success('修改成功',U('News/news'));
 		}else{
 			$this->error('修改失败');
 		}
+
 	}
 
 	public function del(){
+
 		$id = I('get.id');
 		$model = D('News');
 		$data = D('News')->where("new_id='$id'")->delete();
@@ -162,5 +173,7 @@ class NewsController extends BaseController {
 		}else{
 			$this->error('删除失败',U('news'));
 		}
+
 	}
+
 }

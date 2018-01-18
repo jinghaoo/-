@@ -8,9 +8,14 @@ class ContactsController extends BaseController {
 		$this->assign('data',$data);
 		$this->display();
 	}
-	public function save(){
-		$phone   = I('post.phone');
-		$tel     =I('post.tel');
+
+	function save(){
+		$phone1   = I('post.phone');
+		$phone = addslashes($phone1);
+
+		$tel1     =I('post.tel');
+		$tel     =addslashes($tel1);
+
 		$website = I('post.website');
 		$email   = I('post.email');
 		$qq      = I('post.qq');
