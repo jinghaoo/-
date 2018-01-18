@@ -37,9 +37,10 @@
     </nav>
     <div class="content">
     <div id="content" class="typeSize">
+
         <div class="row news-item">
          <h3 class="item-title" align="center"><?php echo (html_entity_decode($detail["case_title"])); ?></h3>
-            <div class="des col-xs-7 col-xs-offset-1" style="width:60%">
+            <div class="des col-xs-7 col-xs-offset-1" style="width:95%">
                 <div class="item-des">
                     <?php echo (html_entity_decode($detail["case_content"])); ?>
                 </div>
@@ -59,6 +60,7 @@
             </div>
         </div>
     </div>
+
     </div>
 
     <!--底部-->

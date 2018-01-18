@@ -101,7 +101,8 @@ class NewsController extends BaseController {
 	public function editOk(){
 		$news_id    =I('post.id');
 		$title = I('post.new_title');
-		$news_title = addslashes($title)；
+		$news_title = addslashes($title);
+
 		$order1      = I('post.order');
 		$order      = addslashes($order1);
 		$new_header     = I('post.header');
@@ -147,7 +148,7 @@ class NewsController extends BaseController {
 		    		'new_title' =>$news_title,
 		    		'new_pic' =>$news_pic,
 		    		'new_gpic' =>$news_gpic,
-		    		'new_intro' =>$news_intros,
+		    		'new_intro' =>$new_intros,
 		    		'new_content' =>$news_content,
 		    		'header'   =>$header,
 		    		'footer'   =>$footer,
