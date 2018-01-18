@@ -5,12 +5,10 @@ class ContactsController extends BaseController {
 	public function contacts(){
 		$model = D("Contacts");
 		$data = $model->select();
-		// dump($data);
-		// exit;
 		$this->assign('data',$data);
 		$this->display();
 	}
-	function save(){
+	public function save(){
 		$phone   = I('post.phone');
 		$tel     =I('post.tel');
 		$website = I('post.website');
@@ -18,7 +16,6 @@ class ContactsController extends BaseController {
 		$qq      = I('post.qq');
 		$address = I('post.address');
 		$pic     = I('post.pic');
-
 		$info = array(
 			'id'      => 1,
 			'cont_phone' => $phone,
@@ -29,15 +26,12 @@ class ContactsController extends BaseController {
 			'cont_website'=> $website,
 			'cont_pic'   => $pic
 		);
-	
-		$model = D('Contacts');
-		
+		$model = D('Contacts');	
 		$data = $model->save($info);
 		if($data){
 			$this->success('修改成功',U('contacts'));
 		}else{
 			$this->error('修改失败',U('contacts'));
-		}
-		
+		}	
 	}
 }

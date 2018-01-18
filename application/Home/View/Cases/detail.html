@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     {$nav.header|html_entity_decode}
-
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/public.css">
     <link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/productDetail.css">
@@ -36,29 +35,35 @@
             </div>
         </div>
     </nav>
-    <!-- <div class="content">
-        <div id="content" class="typeSize">
-
-        </div>
-    </div> -->
     <div class="content">
     <div id="content" class="typeSize">
-        <volist name="data" id="vo">
-            <!-- <a href="/index.php/Home/News/detail/id/{$new.new_id}"> -->
-                <div class="row news-item">
-                 <h3 class="item-title" align="center">{$vo.case_title}</h3>
-                    <!-- <div class="img col-xs-4"><img src={$vo["new_pic"]|ltrim='.'}></div> -->
-                    <div class="des col-xs-7 col-xs-offset-1" style="width:85%">
-                       
-                        <div class="item-des">
-                            {$vo.case_content|html_entity_decode}
-                        </div>
-                    </div>
+        <div class="row news-item">
+         <h3 class="item-title" align="center">{$detail.case_title|html_entity_decode}</h3>
+            <div class="des col-xs-7 col-xs-offset-1" style="width:60%">
+                <div class="item-des">
+                    {$detail.case_content|html_entity_decode}
                 </div>
-            </a>
-        </volist>
+            </div>
+        </div>
+        <div class="bottom clearfix">
+            <div class="pre">
+                <empty name="beforeInfo">
+                    <&nbsp;无
+                <else />
+                    <a href="{:U('Cases/detail','id='.$beforeInfo['case_id'])}" ><&nbsp;{$beforeInfo['case_title']|html_entity_decode}</a>
+                </empty>
+            </div>
+
+            <div class="next">
+                <empty name="afterInfo">
+                    无&nbsp;>
+                <else />
+                    <a href="{:U('Cases/detail','id='.$afterInfo['case_id'])}" >{$afterInfo['case_title']|html_entity_decode}&nbsp;></a>
+                </empty>
+            </div>
+        </div>
     </div>
-</div>
+    </div>
 
     <!--底部-->
     <div class="footer">
@@ -117,7 +122,6 @@
 </script>
 <script type="text/javascript" src="__PUBLIC__/Home/libs/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="__PUBLIC__/Home/libs/bootstrap/js/bootstrap.min.js"></script>
-<!-- <script type="text/javascript" src="__PUBLIC__/Home/libs/template-web.js"></script>
-<script type="text/javascript" src="__PUBLIC__/Home/script/publice.js"></script>
-<script type="text/javascript" src="__PUBLIC__/Home/script/product-detail.js"></script> -->
+{$nav.footer|html_entity_decode}
+
 </html>

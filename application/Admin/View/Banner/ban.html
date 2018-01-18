@@ -1,33 +1,27 @@
 <include file="Public/header" />
 <include file="Public/content" />
   <!-- sidebar end -->
-
   <!-- content start -->
   <div class="admin-content">
-
     <div class="am-cf am-padding">
       <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">轮播图</strong> / <small>Banner</small></div>
     </div>
-
     <div class="am-g">
       <div class="am-u-md-6 am-cf">
         <div class="am-fl am-cf">
           <div class="am-btn-toolbar am-fl">
             <div class="am-btn-group am-btn-group-xs">
               <button type="button" class="am-btn am-btn-default"><a href="{:U('Banner/add')}"><span class="am-icon-plus"></span>添加轮播图</a></button>
-            </div>
-
-       
+            </div>   
           </div>
         </div>
       </div>
       <div class="am-u-md-3 am-cf">
         <div class="am-fr">
-   
+  
         </div>
       </div>
     </div>
-
     <div class="am-g">
       <div class="am-u-sm-12">
         <form class="am-form" >
@@ -39,20 +33,14 @@
           </thead>
           <tbody>
           <volist name="data" id="con">
-            <tr>
-             
+            <tr>            
               <td>{$con.orderby}</td>
-
-              <td><img src= "__ROOT__{$con.ban_pic|ltrim='.'}" style="width:50px;" /></td>
-
-          
+              <td><img src= "__ROOT__{$con.ban_pic|ltrim='.'}" style="width:50px;" /></td>       
               <td>
                 <div class="am-btn-toolbar">
                   <div class="am-btn-group am-btn-group-xs">
                     <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><a href="{:U('edit','id='.$con['id'])}"><span class="am-icon-pencil-square-o"></span> 编辑</a></button>
                     <button class="am-btn am-btn-default am-btn-xs am-text-danger"><a href="{:U('del','id='.$con['id'])}"><span class="am-icon-trash-o"></span> 删除</button>
-               
-
                   </div>
                 </div>
               </td>
@@ -66,14 +54,4 @@
   </div>
   <!-- content end -->
 </div>
-
-<!--[if lt IE 9]>
-<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="assets/js/polyfill/rem.min.js"></script>
-<script src="assets/js/polyfill/respond.min.js"></script>
-<script src="assets/js/amazeui.legacy.js"></script>
-<![endif]-->
-
-<!--[if (gte IE 9)|!(IE)]><!-->
 <include file="Public/footer" />

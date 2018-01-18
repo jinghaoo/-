@@ -4,10 +4,9 @@ use Think\Controller;
 
 class IndexController extends Controller {
     public function index(){
-    	echo 123;
+    	$this->redirect('Index/login');
     }
-   
-    function login(){
+    public function login(){
      	if(IS_POST){
      		$name  = I('post.user_name');
      		$password =  I('post.user_pass');
@@ -24,9 +23,9 @@ class IndexController extends Controller {
          	$this->display();
         }
     }
-    function loginout(){
-        session(null);  
-        $this->redirect('Index/login'); 
 
+    public function loginout(){
+        session(null);
+        $this->redirect('Index/login');
     }
 }

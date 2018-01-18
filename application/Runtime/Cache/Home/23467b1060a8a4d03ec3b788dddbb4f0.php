@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <?php echo (html_entity_decode($nav["header"])); ?>
-
     <link rel="stylesheet" type="text/css" href="/Public/Home/libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/Public/Home/css/public.css">
     <link rel="stylesheet" type="text/css" href="/Public/Home/css/productDetail.css">
@@ -36,27 +35,31 @@
             </div>
         </div>
     </nav>
-    <!-- <div class="content">
-        <div id="content" class="typeSize">
-
-        </div>
-    </div> -->
     <div class="content">
     <div id="content" class="typeSize">
-        <?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><!-- <a href="/index.php/Home/News/detail/id/<?php echo ($new["new_id"]); ?>"> -->
-                <div class="row news-item">
-                 <h3 class="item-title" align="center"><?php echo ($vo["case_title"]); ?></h3>
-                    <!-- <div class="img col-xs-4"><img src=<?php echo (ltrim($vo["new_pic"],'.')); ?>></div> -->
-                    <div class="des col-xs-7 col-xs-offset-1" style="width:85%">
-                       
-                        <div class="item-des">
-                            <?php echo (html_entity_decode($vo["case_content"])); ?>
-                        </div>
-                    </div>
+        <div class="row news-item">
+         <h3 class="item-title" align="center"><?php echo (html_entity_decode($detail["case_title"])); ?></h3>
+            <div class="des col-xs-7 col-xs-offset-1" style="width:60%">
+                <div class="item-des">
+                    <?php echo (html_entity_decode($detail["case_content"])); ?>
                 </div>
-            </a><?php endforeach; endif; else: echo "" ;endif; ?>
+            </div>
+        </div>
+        <div class="bottom clearfix">
+            <div class="pre">
+                <?php if(empty($beforeInfo)): ?><&nbsp;无
+                <?php else: ?>
+                    <a href="<?php echo U('Cases/detail','id='.$beforeInfo['case_id']);?>" ><&nbsp;<?php echo (html_entity_decode($beforeInfo['case_title'])); ?></a><?php endif; ?>
+            </div>
+
+            <div class="next">
+                <?php if(empty($afterInfo)): ?>无&nbsp;>
+                <?php else: ?>
+                    <a href="<?php echo U('Cases/detail','id='.$afterInfo['case_id']);?>" ><?php echo (html_entity_decode($afterInfo['case_title'])); ?>&nbsp;></a><?php endif; ?>
+            </div>
+        </div>
     </div>
-</div>
+    </div>
 
     <!--底部-->
     <div class="footer">
@@ -115,7 +118,6 @@
 </script>
 <script type="text/javascript" src="/Public/Home/libs/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="/Public/Home/libs/bootstrap/js/bootstrap.min.js"></script>
-<!-- <script type="text/javascript" src="/Public/Home/libs/template-web.js"></script>
-<script type="text/javascript" src="/Public/Home/script/publice.js"></script>
-<script type="text/javascript" src="/Public/Home/script/product-detail.js"></script> -->
+<?php echo (html_entity_decode($nav["footer"])); ?>
+
 </html>

@@ -81,9 +81,9 @@
                 <div class="row news-item">
                     <div class="img col-xs-4"><img src={$new["new_pic"]|ltrim='.'}></div>
                     <div class="des col-xs-7 col-xs-offset-1">
-                        <h3 class="item-title">{$new.new_title}</h3>
+                        <h3 class="item-title">{$new.new_title|html_entity_decode}</h3>
                         <div class="item-des">
-                            {$new.new_intro}
+                            {$new.new_intro|html_entity_decode}
                         </div>
                     </div>
                 </div>
@@ -135,10 +135,8 @@
         </div>
     </div>
     {{/each}}
+    
 </script>
 <script type="text/javascript" src="__PUBLIC__/Home/libs/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="__PUBLIC__/Home/libs/bootstrap/js/bootstrap.min.js"></script>
-<!-- <script type="text/javascript" src="__PUBLIC__/Home/libs/template-web.js"></script>
-<script type="text/javascript" src="__PUBLIC__/Home/script/publice.js"></script>
-<script type="text/javascript" src="__PUBLIC__/Home/script/news-list.js"></script> -->
 </html>

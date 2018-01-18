@@ -8,15 +8,16 @@ class NavController extends BaseController{
         $data = $model->find();
         $this->assign('data',$data);
         $this->display();
-
     }
-    function save(){
+    public function save(){
         $nav_header = I('post.nav_header', '');
         $nav_footer = I('post.nav_footer', '');
-
-        $sql = "update re_nav set header='$nav_header',footer='$nav_footer' where id = 1";
-        $data = D('Nav')->execute($sql);
-
+        $info =array(
+            'id'     =>1,
+            'header' =>$nav_header,
+            'footer' =>$nav_footer,
+            );
+        $data = D('Nav')->save($info);
         if($data){
             $this->success('修改成功',U('nav'));
         }else{

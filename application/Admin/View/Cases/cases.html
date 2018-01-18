@@ -41,10 +41,10 @@
           <volist name="data" id="con">
             <tr>
              
-              <td>{$con.orderby}</td>
-              <td>{$con.case_title}</td>
+              <td>{$con.case_id|html_entity_decode}</td>
+              <td>{$con.case_title|html_entity_decode}</td>
               <td><img src= "__ROOT__{$con.case_pic|ltrim='.'}" style="width:50px;" /></td>
-              <td style="text-align:center">{$con.case_content}</td>
+              <td style="text-align:center">{$con.case_content|html_entity_decode}</td>
           
               <td>
                 <div class="am-btn-toolbar">
@@ -60,18 +60,6 @@
           </tbody>
         </table>
           <div class="am-cf">
- 
-<!--   <div class="am-fr">
-    <ul class="am-pagination">
-      <li class="am-disabled"><a href="#">«</a></li>
-      <li class="am-active"><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li><a href="#">»</a></li>
-    </ul>
-  </div> -->
 </div>
           <hr />     
         </form>
