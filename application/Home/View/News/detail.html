@@ -70,7 +70,7 @@
               <empty name="beforeInfo">
                 <&nbsp;无
               <else />
-                <a href="{:U('News/detail','id='.$beforeInfo['new_id'])}" ><&nbsp;{$beforeInfo['new_title']|html_entity_decode}</a>
+                <a href="{:U('News/detail','id='.$beforeInfo['new_id'])}" ><&nbsp;{$beforeInfo['new_title']|html_entity_decode|subtext=15}</a>
               </empty>
             </div>
 
@@ -78,7 +78,7 @@
                 <empty name="afterInfo">
                 无&nbsp;>
                 <else />
-                    <a href="{:U('News/detail','id='.$afterInfo['new_id'])}" >{$afterInfo['new_title']|html_entity_decode}&nbsp;></a>
+                    <a href="{:U('News/detail','id='.$afterInfo['new_id'])}" >{$afterInfo['new_title']|html_entity_decode|subtext=15}&nbsp;></a>
                 </empty>
             </div>
         </div>

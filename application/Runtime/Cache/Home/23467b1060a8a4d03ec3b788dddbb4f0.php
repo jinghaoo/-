@@ -50,13 +50,13 @@
             <div class="pre">
                 <?php if(empty($beforeInfo)): ?><&nbsp;无
                 <?php else: ?>
-                    <a href="<?php echo U('Cases/detail','id='.$beforeInfo['case_id']);?>" ><&nbsp;<?php echo (html_entity_decode($beforeInfo['case_title'])); ?></a><?php endif; ?>
+                    <a href="<?php echo U('Cases/detail','id='.$beforeInfo['case_id']);?>" ><&nbsp;<?php echo (subtext(html_entity_decode($beforeInfo['case_title']),15)); ?></a><?php endif; ?>
             </div>
 
             <div class="next">
                 <?php if(empty($afterInfo)): ?>无&nbsp;>
                 <?php else: ?>
-                    <a href="<?php echo U('Cases/detail','id='.$afterInfo['case_id']);?>" ><?php echo (html_entity_decode($afterInfo['case_title'])); ?>&nbsp;></a><?php endif; ?>
+                    <a href="<?php echo U('Cases/detail','id='.$afterInfo['case_id']);?>" ><?php echo (subtext(html_entity_decode($afterInfo['case_title']),15)); ?>&nbsp;></a><?php endif; ?>
             </div>
         </div>
     </div>
